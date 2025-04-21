@@ -60,7 +60,9 @@
     "build:storybook-addon": "yarn w @saas-ui/storybook-addon build",
     "build:props-docs": "yarn typedocs && yarn w @saas-ui/props-docs build",
     "typedocs": "tsx scripts/typedocs.ts",
-    "preinstall": "rm -rf node_modules/odiff-bin"
+    "preinstall": "rm -rf node_modules/odiff-bin",
+    "replace-illustrations": "tsx scripts/replace-illustrations.ts",
+    "replace-colors": "tsx scripts/replace-colors.ts"
   },
   "workspaces": [
     "apps/website",

@@ -63,3 +63,7 @@ yarn-error.log*
 .contentlayer
 
 .changelogrc
+
+apps/website/components/new-illustrations
+illustrations/
+new-illustrations/

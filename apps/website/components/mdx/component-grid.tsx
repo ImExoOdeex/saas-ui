@@ -1,19 +1,20 @@
-import { Box, Center, SimpleGrid, Stack } from "@chakra-ui/react"
-import Link from "next/link"
-import { LuCode } from "react-icons/lu"
-import { kebabCase } from "scule"
-import { getComponent } from "../illustrations"
-import { docs } from ".velite"
+import { Box, Center, SimpleGrid, Stack } from '@chakra-ui/react'
+import Link from 'next/link'
+import { LuCode } from 'react-icons/lu'
+import { kebabCase } from 'scule'
+
+import { getComponent } from '../new-illustrations'
+import { docs } from '.velite'
 
 const components = docs.filter(
-  (doc) => doc.slug.includes("components/") && !doc.slug.includes("concepts/"),
+  (doc) => doc.slug.includes('components/') && !doc.slug.includes('concepts/'),
 )
 
 export const ComponentGrid = () => {
   return (
     <SimpleGrid minChildWidth="240px" gap="6" mt="8">
       {components.map((item) => {
-        const key = kebabCase(item.slug).replace("docs-components-", "")
+        const key = kebabCase(item.slug).replace('docs-components-', '')
         const Illustration = getComponent(key) ?? LuCode
 
         return (
@@ -30,7 +31,7 @@ export const ComponentGrid = () => {
               <Center
                 height="120px"
                 bg="bg.subtle"
-                _icon={{ color: "fg.subtle" }}
+                _icon={{ color: 'fg.subtle' }}
               >
                 <Illustration width="100%" height="100%" />
               </Center>
